@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: rgb(253, 248, 252);
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%; /* Definir altura total do corpo */
+    margin: 0; /* Remover margens padrão */
+}
+
+.topic-container {
+    width: 125px;
+    height: 125px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f6f6;
+    border-radius: 8px;
+    display: inline-block;
+    vertical-align: top; /* Alinhar os contêineres ao topo */
+    position: relative; /* Posição relativa para posicionar o resumo */
+    cursor: pointer; /* Alterar cursor para indicar interatividade */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.summary {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 10px); /* Posiciona ao lado direito da imagem */
+    width: 200px; /* Largura do resumo */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none; /* Inicialmente oculto */
+}
+
+.word {
+    box-shadow: 0 2px 4px rgba(0, 0, 255, 0.5); /* Azul para Word */
+}
+
+.excel {
+    box-shadow: 0 2px 4px rgba(0, 128, 0, 0.5); /* Verde para Excel */
+}
+
+.powerpoint {
+    box-shadow: 0 2px 4px rgba(255, 165, 0, 0.5); /* Laranja para PowerPoint */
+}

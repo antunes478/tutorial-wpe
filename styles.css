@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-top: 70px; /* Adicione uma margem superior para evitar sobreposição com a barra de navegação fixa */
+    background-color: #070707;
+    color: #fff;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 20px; /* Adicione algum espaçamento lateral, se desejar */
+    margin: 0 auto;
+}
+
+/* Barra de Navegação */
+.navbar {
+    background-color: #000; /* Cor de fundo preta */
+    color: #0b1bf8;
+    padding: 1em 0; /* Adiciona algum espaço interno */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que a barra de navegação esteja acima de outros elementos */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a altura da barra de navegação */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative; /* Adiciona posição relativa para posicionamento dos elementos de animação */
+}
+
+/* Adiciona elementos de animação para as bordas superior e inferior */
+.navbar a::before,
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Largura inicial da animação */
+    height: 2px; /* Altura da animação */
+    background-color: #fff; /* Cor da animação */
+    transition: width 0.3s; /* Adiciona transição suave à largura da animação */
+}
+
+/* Borda superior */
+.navbar a::before {
+    top: 0;
+    left: 0;
+}
+
+/* Borda inferior */
+.navbar a::after {
+    bottom: 0;
+    left: 0;
+}
+
+/* Adiciona efeito de hover para a barra de navegação */
+.navbar a:hover::before,
+.navbar a:hover::after {
+    width: 100%; /* Aumenta a largura da animação para 100% durante o hover */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Cabeçalho e Seções */
+header, section {
+    padding: 2em 0; /* Adiciona algum espaço interno */
+}
+
+header h1, header p, section h2 {
+    color: #1337d8;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho sobre um web tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start; /* Alinhar o conteúdo à esquerda */
+            align-items: center;
+        }
+
+        #video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-overlay {
+            position: relative; /* Alterar para relativo para alinhar corretamente os elementos */
+            width: 100%;
+            max-width: 800px; /* Definir largura máxima para o conteúdo */
+            margin-left: 0px; /* Margem à esquerda para afastar o conteúdo da borda */
+            padding: 80px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+        }
+
+        .container {
+            text-align: left; /* Alinhar o texto à esquerda */
+        }
+
+        .topic-container {
+            width: 125px;
+            height: 125px;
+            margin-bottom: 80px; /* Adicionar margem inferior para separar os contêineres */
+            padding: 20px;
+            background-color: #f3f3f3;
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .summary {
+            position: absolute;
+            top: 0;
+            left: calc(100% + 10px);
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .summary a {
+            color: rgb(0, 0, 255); /* Cor azul para o link */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .word {
+            box-shadow: 0 8px 8px rgb(27, 94, 190) ; /* Azul para Word */
+        }
+
+        .excel {
+    box-shadow: 0 8px 8px rgb(16, 121, 63); /* Verde para Excel */
+}
+
+        .powerpoint {
+            box-shadow: 0 6px 6px rgb(193, 59, 27); /* Laranja para PowerPoint */
+        }
+        
+        h2{
+            color: #faa627;
+        }
+        h3 {color: #fda219;
+        }
+
+        h1{color: #ffa621;
+         }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Vídeo de plano de fundo -->
+    <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source src="175323-853193719_small.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+        </video>
+
+        <!-- Overlay para conteúdo -->
+        <div class="content-overlay">
+            <div class="container">
+                <center><h1>Trabalho sobre um web tutorial</h1></center>
+
+                <!-- Tópicos alinhados à esquerda -->
+                <div class="topic-container word">
+                    <img src="capafotos/word.png" alt="Logo do Word">
+                    <div class="summary">
+                        Microsoft Word - Um processador de texto popular desenvolvido pela Microsoft. Utilizado para criar, editar e formatar documentos diversos. <a href="word.html">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="topic-container excel">
+                    <img src="capafotos/excel.png" alt="Logo do Excel">
+                    <div class="summary">
+                        Microsoft Excel - Um software de planilha utilizado para análise, cálculos e representação gráfica de dados. Ideal para organizar informações complexas em formato de tabela. <a href="excel.html">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="topic-container powerpoint">
+                    <img src="capafotos/powerpoint.png" alt="Logo do PowerPoint">
+                    <div class="summary">
+                        Microsoft PowerPoint - Um programa para criar e exibir apresentações de slides. Permite adicionar texto, imagens, gráficos e animações às apresentações. <a href="powerpoint.html">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- Informações adicionais -->
+                <div>
+                    <h2>Trabalho realizado pelo grupo:</h2>
+                    <h3>Jean Pierre e Tomás</h3>
+                    <h2>Professor orientador:</h2>
+                    <h3>Henrique</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Adicionar eventos de mouseover e mouseout para cada contêiner de tópico
+        const topicContainers = document.querySelectorAll('.topic-container');
+
+        topicContainers.forEach(container => {
+            const summary = container.querySelector('.summary');
+
+            container.addEventListener('mouseover', () => {
+                summary.style.display = 'block';
+            });
+
+            container.addEventListener('mouseout', () => {
+                summary.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
